@@ -1,7 +1,7 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    // Tanto faz: Operador Ternário ou Switch...Case
-    /*
+  // Tanto faz: Operador Ternário ou Switch...Case
+  /*
     Problema: Considere que uma pessoa foi abastecer o seu veículo e deseja colocar determinada quantidade de combustível. Peça para ela informar quanto que deseja abastecer, sendo que os combustíveis possíveis são:
     - Gasolina (G): R$ 6,19
     - Etanol (E): R$ 5,29
@@ -12,16 +12,23 @@
     Apresente o resultado final a ser pago pelo abastecimento.
     */
 
-    //Entrada
+  //Entrada
+  const combustível = prompt(
+    `Informe o combustivel que deseja usar,(G)gasolina,(E)etanol,(D)diesel,)(GNW)gnv`
+  );
+  const quantidade = Number(
+    prompt(`Informe a quantidade que deseja usar de combustivel em sua moto.`)
+  ).toFixed(2);
+  let valor = "";   
+  //Processamento
+  (combustível == `G`) ? valor = `O custo do combustivel sera de ${quantidade * 6.19}`:(combustível == `E`) ? valor = `O custo do combustivel sera de ${quantidade * 5.29}`:(combustível == `D`) ? valor = `O valor do combustivel sera de ${quantidade * 5.09}` : (combustível == `gnw`) ? valor = `O valor do combustivel sera de ${quantidade * 0.1}` : valor = `Valor invalido`
 
-    
-    //Processamento
+ 
 
-    
-    //Saída
+  //Saída
+  alert(valor)
 
-
-    /*
+  /*
     Para testar:
     Entradas: Quantidade de combustível (número) e Tipo do Combustível (G, E, D, N)
     - Informando 25 (quantidade) e G (tipo do combustível), a resposta será "Custo: R$ 139,28"

@@ -1,5 +1,5 @@
 <script>
-    /*USANDO SWITCH CASE USANDO SWITCH CASE USANDO SWITCH CASE
+  /*USANDO SWITCH CASE USANDO SWITCH CASE USANDO SWITCH CASE
 
     Problema: Comprar Leite
     Peça para o usuário informar o tipo de leite que deseja e considere a seguinte situação:
@@ -11,15 +11,28 @@
     DICA: Use I para Integral, S para Semi-Desnatado e D para Desnatado.
     */
 
-    //Entrada
+  //Entrada
+  const leite = prompt(
+    `Informe o tipo de leite que deseja,(I)integral,(S)Semi desnatado,(D)Desnatado.`.toLowerCase()
+  );
+  //Processamento
+  switch (leite) {
+    case `i`:
+      alert(`Preço do Leite Integral: R$ 4,99`);
+      break;
+    case `s`:
+      alert(`"Preço do Leite Semi-Desnatado: R$ 4,49"`);
+      break;
+    case `d`:
+      alert(`Preço do Leite Desnatado: R$ 4,74"`);
+      break;
+    default:
+      alert(`"Opção de compra inválida"`);
+  }
 
-    
-    //Processamento
+  //Saída
 
-    
-    //Saída
-
-    /*
+  /*
     Para testar:
     Entrada: Tipo do Leite que deseja comprar (poderá ser I, S ou D)
     - Informando I, a mensagem será "Preço do Leite Integral: R$ 4,99"

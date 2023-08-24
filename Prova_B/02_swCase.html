@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     Problema: Escolha do Porte do Pet
     Peça para o programa perguntar para o usuário qual o tamanho do pet que deseja adotar/comprar.
     - Caso o usuário informe "(P)Pequeno", o programa apresentará a mensagem "Até 18 Kgs".
@@ -9,15 +9,28 @@
     Apresente a mensagem em tela.
     */
 
-    //Entrada
+  //Entrada
+  const tamanho =   (
+    prompt(
+      `Informe qual o tamanho do pet que deseja comprar/adotar,(P)Pequeno,(M)médio,(G),grande`
+    )
+  );
+  //Processamento
+  switch (tamanho) {
+    case `p`:
+      alert(`"Até 18 Kgs".`);
+      break;
+    case `m`:
+      alert("Entre 18 e 28 Kgs");
+      break;
+    case `g`:
+      alert(`"Acima de 28 Kgs".`);
+      break;
+  }
 
-    
-    //Processamento
+  //Saída
 
-    
-    //Saída
-
-    /*
+  /*
     Para testar:
     Entrada: Porte do Pet (poderá ser P, M ou G)
     - Informando P, a mensagem deverá ser "Até 18 Kgs"

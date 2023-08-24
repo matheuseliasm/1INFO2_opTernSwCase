@@ -11,13 +11,15 @@
     */
 
     //Entrada
-
-
+    const moto = Number(prompt(`Informe o preço da moto que deseja comprar.`))
+    const parcelas = Number(prompt(`Em quantas vezes deseja parcela?`))
+    let mensagem = "";
     //Processamento
+    (parcelas == 1) ? mensagem = `O preço da sua moto sera de ${moto}` : (parcelas == 12) ? mensagem = `O preço da sua moto sera de ${moto * 0.09} `: (parcelas > 12) ? mensagem = `O preço da moto sera de ${moto * 15/100}`:mensagem =`Valor invalido`
 
     
     //Saída
-
+    alert(mensagem)
     /*
     Para testar:
     Entradas: Preço da Moto e Número de Parcelas
